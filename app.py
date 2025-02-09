@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Cargar el modelo y los preprocesadores
-with open('svm_model_adult.pck', 'rb') as f:
+with open('tree_model_adult.pck', 'rb') as f:
     scaler, model, label_encoders, feature_names = pickle.load(f)
 
 # Título de la app
