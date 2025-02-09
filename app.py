@@ -37,8 +37,11 @@ input_data = np.array([[age, workclass_encoded, education_encoded, education_num
                         marital_status_encoded, occupation_encoded, relationship_encoded, 
                         sex_encoded, capital_gain, capital_loss, hours_per_week]])
 
+# Asegurar que la entrada tiene las mismas columnas que el modelo
+input_data_df = pd.DataFrame(input_data, columns=feature_names)
+
 # Escalar los datos de entrada
-input_data_scaled = scaler.transform(input_data)
+input_data_scaled = scaler.transform(input_data_df)
 
 # Predicción
 if st.button("Predecir Ingreso"):
